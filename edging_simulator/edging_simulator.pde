@@ -1,7 +1,6 @@
 PImage pic;
 
 void setup() {
-  size(400, 400);
   frameRate(60);
   fullScreen();
   background(200);
@@ -13,12 +12,11 @@ void setup() {
   textSize(80);
   pic = loadImage("stop.jpg");}
 
-
-
 String stage = "start";
 float angle = 230;
 int count = 0;
 int countsec = 0;
+String edgingmessage = "";
 
 void draw(){
   loop();
@@ -29,7 +27,7 @@ void draw(){
      text("PLAY", width/2, height/2+150);}
    else{
      fill(0);
-     text("PLAY", width/2, height/2+150);}}    
+     text("PLAY", width/2, height/2+150);}}
   
   if(stage == "play"){
     fill(200);
@@ -68,14 +66,16 @@ void draw(){
     textAlign(CENTER);
     fill(0);
     text("YOU HAVE FAILED TO EDGE", width/2, height/2);
+    edgingmessage = "EDGING SCORE: " + str(countsec);
     textSize(80);
+    text(edgingmessage, width/2, height/2+100);
     
-    if(mouseX <= 1045 && mouseX >= 870 && mouseY >= 610 && mouseY <= 690){
+    if(mouseX <= 1175 && mouseX >= 740 && mouseY >= 660 && mouseY <= 740){
      fill(150);
-     text("EDGE AGAIN?", width/2, height/2+150);}
+     text("EDGE AGAIN?", width/2, height/2+200);}
     else{
      fill(0);
-     text("EDGE AGAIN?", width/2, height/2+150);}
+     text("EDGE AGAIN?", width/2, height/2+200);}
     }
  
 }
@@ -90,7 +90,7 @@ void mouseClicked(){
    }
     }
   if(stage == "FAILED TO EDGE"){
-    if(mouseX <= 1045 && mouseX >= 870 && mouseY >= 610 && mouseY <= 690){
+    if(mouseX <= 1175 && mouseX >= 740 && mouseY >= 660 && mouseY <= 740){
       angle = 230;
       count = 0;
       countsec = 0;
