@@ -29,24 +29,7 @@ void draw(){
      text("PLAY", width/2, height/2+150);}
    else{
      fill(0);
-     text("PLAY", width/2, height/2+150);}}
-  
-  //if(stage == "ready"){
-    
-  //  rectMode(CORNERS);
-  //  translate(width, height);
-  //  rotate(radians(angle));
-  //  rect(0, 0, 1500, 100);
-  //  angle -= 1;
-    
-  //  if(angle == 200){
-  //    angle = 200;}
-    
-    //fill(0);
-    //translate(width, height);
-    //rotate(radians(angle));
-    //rect(0, 0, 1500, 100);
-    
+     text("PLAY", width/2, height/2+150);}}    
   
   if(stage == "play"){
     fill(200);
